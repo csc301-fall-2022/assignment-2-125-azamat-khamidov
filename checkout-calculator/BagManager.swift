@@ -21,4 +21,12 @@ class BagManager: ObservableObject {
         totalBeforeTaxAndDiscount -= productToRemove.price
     }
     
+    func calculateTax() -> Double {
+        return round((Double(totalBeforeTaxAndDiscount) * 0.13) * 100) / 100
+    }
+    
+    func calculateTotal() -> Double {
+        return Double(totalBeforeTaxAndDiscount) + calculateTax()
+    }
+    
 }
