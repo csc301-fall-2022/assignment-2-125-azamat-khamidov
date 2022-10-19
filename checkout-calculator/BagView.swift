@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BagView: View {
+    @EnvironmentObject var bagManager: BagManager
     var body: some View {
         ScrollView {
             Text("Your bag is empty!")
@@ -19,6 +20,6 @@ struct BagView: View {
 
 struct BagView_Previews: PreviewProvider {
     static var previews: some View {
-        BagView()
+        BagView().environmentObject(BagManager())
     }
 }

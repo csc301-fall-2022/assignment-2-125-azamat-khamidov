@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProductCard: View {
+    @EnvironmentObject var bagManager: BagManager
     var product: Product
     var body: some View {
         VStack(alignment: .center, spacing: 7) {
@@ -27,7 +28,7 @@ struct ProductCard: View {
             }
             
             Button {
-                print("Added to cart!")
+                bagManager.addToBag(product: product)
             } label: {
                 Image(systemName: "plus")
                     .padding(8)
@@ -41,5 +42,6 @@ struct ProductCard: View {
 struct ProductCard_Previews: PreviewProvider {
     static var previews: some View {
         ProductCard(product: productArray[0])
+            .environmentObject(BagManager())
     }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var bagManager = BagManager()
     var cols = [GridItem(.adaptive(minimum: 160), spacing: 20)]
     
     var body: some View {
@@ -16,6 +17,7 @@ struct ContentView: View {
                 LazyVGrid(columns: cols ,spacing: 20) {
                     ForEach(productArray, id: \.id) { product in
                         ProductCard(product: product)
+                            .environmentObject(bagManager)
                     }
                 }
                 .padding()
@@ -23,9 +25,9 @@ struct ContentView: View {
             .navigationTitle(Text("AirPods"))
             .toolbar {
                 NavigationLink {
-                    BagView()
+                    BagView().environmentObject(bagManager)
                 } label: {
-                    BagButtonModel(numberOfProductsInBag: 1)
+                    BagButtonModel(numberOfProductsInBag: bagManager.products.count)
                 }
                 
             }
@@ -35,6 +37,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(BagManager())
     }
 }
