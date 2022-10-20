@@ -17,7 +17,12 @@ class BagManager: ObservableObject {
     }
     
     func removeFromBag(productToRemove: Product) {
-        products = products.filter { $0.id != productToRemove.id }
+        for i in 0...products.count {
+            if products[i].id == productToRemove.id {
+                products.remove(at: i)
+                break
+            }
+        }
         totalBeforeTaxAndDiscount -= productToRemove.price
     }
     
