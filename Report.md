@@ -19,3 +19,18 @@ Decision: Considering all the aforementioned pros and cons, as well as the fact 
 ## Database:
 Although not implemented, the database option to implement for this application would involve first deciding whether a relational or non-relational database is more suitable and appropriate for the built application. Since the application I built revolves around shopping/ecommerce, it would make sense that the ease of analytics in the future (how many of each item sold, average order size/cost, etc.) should be a significant factor in deciding the type of the database. Although more difficult to setup at first, relational database (such as MySQL or PostgreSQL) and its rigid and organized structure, where data is stored in tables, would allow for complex relational queries for complex analytics. On the other hand, a NoSQL (such as MongoDB) database would have cheaper associated costs of working with large volumes of data and ease of expansion and scalability. However, given that my application tries to “mimic” Apple Store on a mobile application, being able to track data and perform complex analytics and having an organized database would probably be more valuable. Therefore, if I were to choose one database to implement, it would be a RDBMS, as it would allow to store everything in tables (product information, customer information, order information, etc.). The most popular RDBMS are MySQL and PostgreSQL. Although it’s proven that MySQL has faster query time and has optimized in other ways to optimize performance, I believe PostgreSQL would be a better choice for this application for numerous reasons. Firstly, it’s an object-relational database, whereas MySQL is purely relational, offering PostgreSQL additional features such as table inheritance. More importantly, PostgreSQL handles concurrency better, which is vital for data integrity protection at the transaction level, making it less vulnerable to data corruption. 
 
+
+## Summary:
+With all the options considered in the previous three sections, the final decision was to develop a mobile application written on Swift. The main two reasons for this decision were:
+Consumers shop online more on their mobile devices than on a desktop. Given the scope of the assignment is to develop a checkout calculator, I built a mini ecommerce store with the checkout option, so a mobile application seemed more appropriate for this assignment.
+My group project for CSC301 as well as my group project as a part of UofT Blueprint (a club which builds software solutions for non-profits) involves mobile app development on Swift, so familiarizing myself with the structure and syntax of Swift on a small-scale assignment would make the learning curve less steep when I am starting writing code for the aforementioned projects.
+If I were to further improve the application and add a database management system, I would have used a relational DBMS (PostgreSQL) due to its support for complex relational queries, allowing in-depth analytics of the sales for the ‘ecommerce shop’ mobile application that was developed.
+
+
+### List of resources/guides/tutorials used during the development of the mobile app:
+* https://www.youtube.com/watch?v=bZNAFkkUeKs&t=415s&ab_channel=Devslopes
+* https://www.youtube.com/watch?v=5b91dFhZz0g&t=633s&ab_channel=Devslopes
+* https://www.youtube.com/watch?v=UsUriZLCwws&t=602s&ab_channel=Devslopes
+* https://www.youtube.com/watch?v=cAUgXCCnFNs&ab_channel=iOSAcademy
+* https://www.youtube.com/watch?v=fwG1pDgytDc&ab_channel=DesignCode
+* https://www.raywenderlich.com/21020457-ios-unit-testing-and-ui-testing-tutorial 
