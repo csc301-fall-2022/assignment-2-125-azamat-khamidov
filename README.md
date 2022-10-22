@@ -1,4 +1,4 @@
-# assignment-2-125-azamat-khamidov
+# Assignment 2
 assignment-2-125-azamat-khamidov created by GitHub Classroom
 
 * Azamat Khamidov, student number: 1006907279, UTORid: khamidov
